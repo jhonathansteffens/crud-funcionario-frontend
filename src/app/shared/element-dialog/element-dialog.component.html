@@ -1,0 +1,29 @@
+<h1 *ngIf="!isChange" mat-dialog-title>Criar Funcionario</h1>
+<h1 *ngIf="isChange" mat-dialog-title>Editar Funcionario</h1>
+<div mat-dialog-content>
+  <mat-form-field style="width: 350px;" appearance="fill">
+    <mat-label>Id</mat-label>
+    <input disabled="true" matInput [(ngModel)]="data.id">
+  </mat-form-field>
+  <mat-form-field style="width: 350px;" appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="data.nome">
+  </mat-form-field>
+  <mat-form-field style="width: 350px;" appearance="fill">
+    <mat-label>Sobrenome</mat-label>
+    <input matInput [(ngModel)]="data.sobrenome">
+  </mat-form-field>
+  <mat-form-field style="width: 350px;" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="data.email">
+  </mat-form-field>
+  <mat-form-field style="width: 350px;" appearance="fill">
+    <mat-label>Nis</mat-label>
+    <input matInput [(ngModel)]="data.nis">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button *ngIf="!isChange" mat-button [mat-dialog-close]="data" cdkFocusInitial>Adicionar</button>
+  <button *ngIf="isChange" mat-button [mat-dialog-close]="data" cdkFocusInitial>Editar</button>
+</div>

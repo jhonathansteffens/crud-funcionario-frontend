@@ -1,0 +1,10 @@
+.container {
+  background-color: #0275d8;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20px;
+}
+
+.footer-content {
+  color: #fff;
+}
